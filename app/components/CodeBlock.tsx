@@ -13,10 +13,10 @@ export function CodeBlock({
     <div className="group relative mt-2">
       <pre
         className={`
-          font-mono text-xs sm:text-[0.78rem] rounded-md px-2.5 py-1.5 pr-8 overflow-x-auto
+          font-mono text-xs sm:text-[0.78rem] rounded-lg px-3 py-2 pr-8 overflow-x-auto border
           ${isExample
-            ? "text-accent2 bg-accent2/5 border border-accent2/15"
-            : "text-accent5 bg-accent5/5 border border-accent5/15"
+            ? "text-accent2 border-accent2/12 bg-accent2/[.025]"
+            : "text-accent5 border-accent5/12 bg-accent5/[.025]"
           }
         `}
       >

@@ -1,11 +1,11 @@
 import { cn } from "@/lib/utils";
 
 const colorMap: Record<string, string> = {
-  cli: "text-accent border-accent/25 bg-accent/6",
-  slash: "text-accent2 border-accent2/25 bg-accent2/6",
-  key: "text-accent3 border-accent3/25 bg-accent3/6",
-  tool: "text-accent4 border-accent4/25 bg-accent4/6",
-  combo: "text-accent5 border-accent5/25 bg-accent5/6",
+  cli: "text-accent border-accent/20",
+  slash: "text-accent2 border-accent2/20",
+  key: "text-accent3 border-accent3/20",
+  tool: "text-accent4 border-accent4/20",
+  combo: "text-accent5 border-accent5/20",
 };
 
 export function BadgeLabel({

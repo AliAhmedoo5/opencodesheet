@@ -75,10 +75,10 @@ export function StickyNav() {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "shrink-0 snap-start px-3 py-1.5 rounded-full text-xs font-medium transition-all duration-200 border border-transparent whitespace-nowrap",
+                  "shrink-0 snap-start px-2.5 py-1.5 text-xs font-medium transition-all duration-200 whitespace-nowrap border-b-2",
                   active === item.href.slice(1)
-                    ? "text-accent border-accent/50 bg-accent/10"
-                    : "text-text2 hover:text-text hover:border-border"
+                    ? "text-accent border-accent"
+                    : "text-text2 border-transparent hover:text-text"
                 )}
               >
                 {item.label}

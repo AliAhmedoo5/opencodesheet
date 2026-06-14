@@ -20,10 +20,10 @@ export function CopyButton({ text, className }: { text: string; className?: stri
       onClick={copy}
       aria-label="Copy to clipboard"
       className={cn(
-        "absolute top-1.5 right-1.5 z-10 flex items-center justify-center w-7 h-7 rounded-md transition-all duration-200",
-        "opacity-0 group-hover:opacity-100 hover:bg-bg3/80 focus:opacity-100 focus:outline-none focus:ring-1 focus:ring-accent/50",
-        "max-sm:opacity-100 max-sm:w-8 max-sm:h-8",
-        done ? "text-accent2" : "text-text2 hover:text-text",
+        "absolute top-2 right-2 z-10 flex items-center justify-center w-6 h-6 rounded-md transition-opacity duration-200",
+        "opacity-0 group-hover:opacity-100 hover:bg-accent/10 focus:opacity-100 focus:outline-none",
+        "max-sm:opacity-80 max-sm:w-7 max-sm:h-7",
+        done ? "text-accent2" : "text-text2/60 hover:text-text",
         className
       )}
     >

@@ -24,7 +24,7 @@ export function CopyToast({ text }: { text: string }) {
           animate={{ opacity: 1, y: 0, scale: 1 }}
           exit={{ opacity: 0, y: 12, scale: 0.95 }}
           transition={{ duration: 0.2 }}
-          className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-4 py-2.5 rounded-full bg-accent/20 border border-accent/30 backdrop-blur-lg text-sm text-accent font-medium shadow-lg"
+          className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 px-3 py-1.5 rounded-lg border border-accent/20 bg-accent/[.04] backdrop-blur-xl text-xs text-accent"
         >
           Copied {text}
         </motion.div>

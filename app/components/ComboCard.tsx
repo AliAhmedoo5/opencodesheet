@@ -15,7 +15,7 @@ export function ComboCard({ item }: { item: ComboItem }) {
       initial={{ opacity: 0, y: 20 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.35 }}
-      className="bg-gradient-to-br from-bg2 to-[#111827] border border-border rounded-lg p-5 transition-colors duration-250 hover:border-accent5/25"
+      className="bg-transparent border border-border/50 rounded-xl p-5 transition-colors duration-250 hover:border-accent5/20"
     >
       <h3 className="text-sm sm:text-base font-semibold mb-1">
         <code className="text-accent5">{item.title}</code>

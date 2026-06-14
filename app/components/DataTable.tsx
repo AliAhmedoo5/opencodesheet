@@ -22,7 +22,7 @@ export function DataTable({
       initial={{ opacity: 0, y: 16 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.35 }}
-      className={cn("overflow-x-auto border border-border rounded-lg", className)}
+      className={cn("overflow-x-auto border border-border/50 rounded-xl", className)}
     >
       <table className="w-full border-collapse text-xs sm:text-sm">
         <thead>
@@ -30,7 +30,7 @@ export function DataTable({
             {headers.map((h, i) => (
               <th
                 key={i}
-                className="text-left font-semibold text-text2 text-[0.65rem] sm:text-xs uppercase tracking-wider px-2.5 sm:px-3 py-2 border-b border-border"
+                className="text-left font-semibold text-text2 text-[0.65rem] sm:text-xs uppercase tracking-wider px-2.5 sm:px-3 py-2.5 border-b border-border/50"
               >
                 {h}
               </th>
@@ -73,7 +73,7 @@ export function DataList({
       initial={{ opacity: 0, y: 12 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.3 }}
-      className={cn("divide-y divide-border/50 border border-border rounded-lg", className)}
+      className={cn("divide-y divide-border/30 border border-border/50 rounded-xl", className)}
     >
       {items.map((item, i) => (
         <div key={i} className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-3 px-3 sm:px-4 py-2.5 text-xs sm:text-sm transition-colors hover:bg-accent/3">
