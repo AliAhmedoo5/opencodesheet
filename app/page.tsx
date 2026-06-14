@@ -13,11 +13,13 @@ import {
   globalFlags,
   slashCommands,
   keybindGroups,
+  desktopPromptShortcuts,
   builtinTools,
   permissionLevels,
   customCommands,
   customCommandOptions,
   envVars,
+  experimentalEnvVars,
   varSubstitution,
   comboPatterns,
 } from "@/lib/data";
@@ -86,6 +88,19 @@ export default function Home() {
           </div>
         </Section>
 
+        {/* Desktop Prompt Shortcuts */}
+        <div className="border border-border/50 rounded-xl p-4 sm:p-5 mt-6 mb-10">
+          <h3 className="text-sm font-semibold mb-3">Desktop Prompt Shortcuts</h3>
+          <p className="text-text2 text-xs sm:text-sm mb-3">Readline-style shortcuts for the desktop app prompt input (built-in, not configurable).</p>
+          <DataTable
+            headers={["Shortcut", "Action"]}
+            rows={desktopPromptShortcuts.map((s) => [
+              <code key="k" className="font-mono text-xs text-accent3 px-1.5 py-0.5 rounded whitespace-nowrap">{s.shortcut}</code>,
+              <span key="a" className="text-text2">{s.action}</span>,
+            ])}
+          />
+        </div>
+
         {/* Built-in Tools */}
         <Section id="tools" title="Built-in Tools" subtitle="Tools the LLM can use. Configure via permission in config.">
           <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3 sm:gap-4">
@@ -150,6 +165,20 @@ export default function Home() {
               <span key="d" className="text-text2">{v.desc}</span>,
             ])}
           />
+          <h3 className="text-sm font-semibold mt-7 mb-3">Experimental</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-3 sm:gap-4">
+            {experimentalEnvVars.map((v, i) => (
+              <div
+                key={i}
+                className="group bg-transparent border border-border/50 rounded-xl p-4 sm:p-5 transition-all duration-250 hover:border-accent/20"
+              >
+                <h3 className="text-xs sm:text-sm font-semibold mb-1">
+                  <code className="text-accent2 font-mono text-[0.7rem] sm:text-xs px-1.5 py-0.5 rounded">{v.title}</code>
+                </h3>
+                <p className="text-text2 text-xs sm:text-sm">{v.description}</p>
+              </div>
+            ))}
+          </div>
         </Section>
 
         {/* Combination Patterns */}
